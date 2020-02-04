@@ -20,7 +20,7 @@ public class BookApp {
         System.out.println(b.getAllInfo());;
 
         //////////////////////////
-        System.out.print("\nEnter a number of desired books: ");
+        System.out.print("\n\nEnter a number of desired books: ");
         int num = sc.nextInt();
 
         double totalCost = b.getBookPricing(num);
@@ -28,10 +28,13 @@ public class BookApp {
 
 
         ///////////////////////////
-        System.out.print("Enter a SKU: ");
+        System.out.print("\n\nEnter a SKU: ");
         String SKU = sc.next();
 
-        BookDB BookDB(SKU);
+        BookDB books = new BookDB();
+        books.setBookInfo(SKU);
+        books.getDisplayText();
+
 
     }
 }

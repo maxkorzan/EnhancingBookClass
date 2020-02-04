@@ -1,11 +1,31 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BookDB {
+public class BookDB extends Book{
+    //variables
+    private ArrayList<Book> books;
 
-    public ArrayList<String> bookDB(String SKU){
+    //constructors
+    public BookDB() {
+    }
 
-        switch(SKU){
+    public BookDB(ArrayList<Book> books) {
+        this.books = books;
+        }
+
+    //methods - getters and setters
+    public ArrayList<Book> getBooks() {
+        return this.books;
+    }
+
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
+
+    //methods - more methods
+
+    public void setBookInfo(String sku) {
+        switch(sku){
             case "Java1001":
                 setTitle("Head First Java\t");
                 setAuthor("Kathy Sierra and Bert Bates\t");
@@ -52,6 +72,12 @@ public class BookDB {
                 System.out.println("SKU not found");
                 break;
         }
+    }
+
+
+
 
     }
-}
+
+
+
